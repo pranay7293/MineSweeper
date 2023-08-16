@@ -1,6 +1,19 @@
 # MineSweeper
 ### MineSweeper Clone with C++
 
+## 🎉 Game On! Unveiling the Thrills:
+
+🌟 Navigate through a grid of mystery, where every cell holds secrets - some hiding devious mines. <br>
+
+💣 Your mission? Safely traverse the minefield, uncovering tiles and revealing hidden numbers. <br>
+
+🔢 Keep an eye on those numbers! They'll guide you toward the mines lurking in the shadows. <br>
+
+🏆 Three exhilarating gameplay modes await, each with its unique set of challenges. <br>
+
+🎮 It's time to unleash your inner strategist and embark on a gaming adventure like never before! <br>
+
+
 ## 🧐🔍 How to Play:
 
 1️⃣ Choose your preferred board size (side length: 9 to 25) and dive into the challenge. <br>
