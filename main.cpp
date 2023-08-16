@@ -33,7 +33,7 @@ public:
         << " 1. Board is divided into cells with mines randomly distributed\n "
            "2. To win, you will need to open all cells without triggering the "
            "mines\n 3. Number on the cell denotes the number of mines adjacent "
-           "to it\n 4. Contains 3 diificulty levels\n 5. Have fun and enjoy!\n"
+           "to it\n 4. Contains 3 Gameplay modes\n 5. Have fun and enjoy!\n"
         << endl;
     cout << "_ _____ _____ _____ _____ _____ _____ _____ _____ _____ _____ _\n";
     cout << " *-----*-----*-----*-----*-----*-----*-----*-----*-----*-----* ";
