@@ -9,7 +9,8 @@
 4️⃣ First move dilemma? No worries! If your first move hits a mine, the game will gracefully adjust, giving you a fair start.  <br>
 
 
-![image](https://github.com/pranay7293/MineSweeper/assets/119421688/679db892-f339-470d-9dfc-37e64c10926b)
+![gandr-collage (10)](https://github.com/pranay7293/MineSweeper/assets/119421688/28acea3c-5a02-43c9-83ca-43ea559e9cce)
+
 
 ![image](https://github.com/pranay7293/MineSweeper/assets/119421688/571b2c5c-aba9-41c1-b22e-e2699a8b29bd)
 
