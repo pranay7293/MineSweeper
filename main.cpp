@@ -5,9 +5,6 @@ using namespace std;
 #define MAXSIDE 25
 #define MAXMINES 99
 
-// Enum for GamePlay Mode
-enum Difficulty { Easy, Intermediate, Hard };
-
 class MineSweeper {
 private:
   int side;
@@ -20,15 +17,15 @@ public:
   // Function for game introduction message
   void GameIntro() {
     cout << endl;
-    cout << "\033[38;5;202m  █▄ ▄█ ▀█▀ █▄  █ █▀▀▀ █▀▀▀ █ ▄ █ █▀▀▀ █▀▀▀ █▀▀▄ "
-            "█▀▀▀ █▀▀▄\033[0m"
+    cout << "\033[38;5;202m  █▄ ▄█ ▀█▀ █▄  █ █▀▀▀  █▀▀▀ █ ▄ █ █▀▀▀ █▀▀▀"
+            " █▀▀▄ █▀▀▀ █▀▀▄\033[0m"
          << endl;
-    cout << "  █ █ █  █  █ █ █ █▀▀▀ ▀▀▄▄ █ █ █ █▀▀▀ █▀▀▀ █▄▄▀ █▀▀▀ █▄▄▀"
+    cout << "  █ █ █  █  █ █ █ █▀▀▀  ▀▀▄▄ █ █ █ █▀▀▀ █▀▀▀ █▄▄▀ █▀▀▀ █▄▄▀"
          << endl;
-    cout << "\033[32m  █   █ ▄█▄ █  ▀█ █▄▄▄ ▄▄▄█ ▀█▀█▀ █▄▄▄ █▄▄▄ █    █▄▄▄ █ "
-            "▀▄\033[0m"
+    cout << "\033[32m  █   █ ▄█▄ █  ▀█ █▄▄▄  ▄▄▄█ ▀█▀█▀ █▄▄▄ █▄▄▄ █   "
+            " █▄▄▄ █ ▀▄\033[0m"
          << endl;
-    cout << "  ----- --- ----- ---- ---- ----- ---- ---- ---- ---- ----"
+    cout << "  ----- --- ----- ----  ---- ----- ---- ---- ---- ---- ----"
          << endl;
     cout << endl;
     cout << " RULES: " << endl;
@@ -79,37 +76,43 @@ public:
   }
 
   // For choosing difficulty level
-  void ChooseSideDifficulty() {
+  void ChooseSideMines() {
     int level;
 
     do {
-      cout << " Choose Board Size (9 <= side < 25): ";
+      cout << "\n Choose Board Size (9 <= side < 25): ";
       cin >> side;
 
       if (side < 9 || side >= MAXSIDE) {
         cout << "Invalid side value. Please enter a value 9 <= side < 25."
-             << endl
              << endl;
+        cin.clear();
       }
     } while (side < 9 || side >= MAXSIDE);
 
     cout << endl;
-    cout << "\033[38;5;202m Enter '0' for Easy " << side << "x" << side;
+    cout << "\033[38;5;202m Enter '0' for " << side << "x" << side;
     cout << " board with " << side << " mines\033[0m" << endl;
-    cout << " Enter '1' for Intermediate " << side << "x" << side;
+    cout << " Enter '1' for " << side << "x" << side;
     cout << " board with " << 2 * side << " mines" << endl;
-    cout << "\033[32m Enter '2' for Hard " << side << "x" << side;
+    cout << "\033[32m Enter '2' for " << side << "x" << side;
     cout << " board with " << 3 * side << " mines\033[0m" << endl;
-    cout << endl;
-    cout << " Choose the Game Play mode: ";
-    cin >> level;
+    do {
+      cout << "\n Choose the Game Play mode: ";
+      cin >> level;
+
+      if (level < 0 || level > 2) {
+        cout << "Invalid input. Please enter '0', '1', or '2'." << endl;
+        cin.clear();
+      }
+    } while (level < 0 || level > 2);
     cout << endl;
 
-    if (level == Difficulty::Easy) {
+    if (level == 0) {
       mines = 1 * side;
-    } else if (level == Difficulty::Intermediate) {
+    } else if (level == 1) {
       mines = 2 * side;
-    } else if (level == Difficulty::Hard) {
+    } else if (level == 2) {
       mines = 3 * side;
     }
   }
@@ -339,7 +342,7 @@ public:
 int main() {
   MineSweeper game;
   game.GameIntro();
-  game.ChooseSideDifficulty();
+  game.ChooseSideMines();
   game.PlayMineSweeper();
   return 0;
 }
