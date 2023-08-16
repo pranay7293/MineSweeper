@@ -3,10 +3,10 @@
 
 ## 🧐🔍 How to Play:
 
-1️⃣ Choose your preferred board size (side length: 9 to 25) and dive into the challenge.
-2️⃣ Select your game mode: '0' for a 10x10 board with 10 mines, '1' for 20 mines, or '2' for a daring 30 mine setup.
-3️⃣ Strategically reveal tiles by entering the x and y coordinates – but watch out for those mines!
-4️⃣ First move dilemma? No worries! If your first move hits a mine, the game will gracefully adjust, giving you a fair start.
+1️⃣ Choose your preferred board size (side length: 9 to 25) and dive into the challenge. <br>
+2️⃣ Select your game mode: '0' for a 10x10 board with 10 mines, '1' for 20 mines, or '2' for a daring 30 mine setup. <br>
+3️⃣ Strategically reveal tiles by entering the x and y coordinates – but watch out for those mines!  <br>
+4️⃣ First move dilemma? No worries! If your first move hits a mine, the game will gracefully adjust, giving you a fair start.  <br>
 
 
 ![image](https://github.com/pranay7293/MineSweeper/assets/119421688/679db892-f339-470d-9dfc-37e64c10926b)
